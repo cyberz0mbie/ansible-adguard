@@ -23,6 +23,7 @@
       - python3-setuptools
       - resolvconf
       - apache2-utils #to generate adguard admin password
+      - git
 
   - name: Install required packages excluding UFW
     when: ufw == "false"
@@ -60,6 +61,7 @@
       - "80"
       - "443"
       - "853"
+      - "784"
 
   - name: Temporarily use this nameserver during initial config and setup
     lineinfile:
